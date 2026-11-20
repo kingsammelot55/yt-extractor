@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <title>YT Extractor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="logo">▶</div>
+      <p class="eyebrow">SIMPLE VIDEO TOOL</p>
+      <h1>YT <span>Extractor</span></h1>
+      <p class="sub">Turn a video link into an MP4 or MP3 file.</p>
+    </header>
+
+    <section class="panel">
+      <label for="backend">Backend URL</label>
+      <input id="backend" type="url" placeholder="https://your-backend.example.com">
+      <label for="key">API key</label>
+      <input id="key" type="password" placeholder="Your private backend API key" autocomplete="off">
+      <div class="rule"></div>
+      <label for="url">Video URL</label>
+      <input id="url" type="url" placeholder="Paste a video URL here">
+      <div class="choices" role="group" aria-label="Output format">
+        <label class="choice"><input type="radio" name="format" value="mp4" checked><span>MP4 <small>Video</small></span></label>
+        <label class="choice"><input type="radio" name="format" value="mp3"><span>MP3 <small>Audio</small></span></label>
+      </div>
+      <div class="buttons">
+        <button id="info" class="secondary">Get video info</button>
+        <button id="download" class="primary">Download</button>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite">Ready when you are.</div>
+      <div id="details" class="details" hidden></div>
+    </section>
+    <p class="foot">Only download content you have permission to use. Respect copyright and the source site's terms.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
