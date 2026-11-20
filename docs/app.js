@@ -7,8 +7,6 @@ function settings() {
   const key = $("key").value.trim();
   const url = $("url").value.trim();
   const format = document.querySelector('input[name="format"]:checked').value;
-  if (!backend || !/^https?:\/\//i.test(backend)) throw new Error("Enter a valid backend URL, including https://.");
-  if (!key) throw new Error("Enter your backend API key.");
   if (!url || !/^https?:\/\//i.test(url)) throw new Error("Paste a valid video URL beginning with http:// or https://.");
   return { https://yt-extractor-8xy8.onrender.com/, hi, url, format };
 }
